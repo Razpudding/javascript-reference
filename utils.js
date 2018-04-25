@@ -143,6 +143,15 @@ function Person (name){			//this argument is not actually used btw
 var laurens = new Person('laurens', "pieter");	//in js the #args dont have to match the constructors #args
 laurens.setName("dirk");
 
+//Recursive functions
+//recursive function that turns an n dimensional array into an n dimensional array filled with 0s🤓
+function convertArrayTo0(arr){
+  let result = arr.map((el) => {
+    return Array.isArray(el) ? convertArrayTo0(el): 0
+  })
+  return result
+}
+
 /*
 * Dev Tricks
 */
